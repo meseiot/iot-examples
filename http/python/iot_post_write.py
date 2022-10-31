@@ -38,23 +38,21 @@
 import json
 import pprint
 import random
-import time
-
 import requests
 
 headers = {'Content-type': 'application/json'}
 
-url = 'http://localhost:8000/api/datas/'
+API_KEY = '21579c1e874fda7276d94f3c'  # write api key
+url = 'http://iothook.com/api/update/'
 
-for i in range(100):
-    data = {
-        'api_key': '7bf59e593a524c16bbdca0465c4b19194ad797c5',
-        'field_1': random.randint(1, 10),
-        'field_2': round(random.uniform(0.0,10.0), 2),
-    }
+data = {
+    'api_key': API_KEY,
+    'field_1': random.randint(1, 10),
+    'field_2': round(random.uniform(0.0, 10.0), 2),
+    'field_3': round(random.uniform(0.0, 10.0), 2),
+}
 
-    data_json = json.dumps(data)
+data_json = json.dumps(data)
 
-    response = requests.post(url, data=data_json, headers=headers)
-    pprint.pprint(response.json())
-    time.sleep(5)
+response = requests.post(url, data=data_json, headers=headers)
+pprint.pprint(response.json())

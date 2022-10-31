@@ -35,8 +35,6 @@
 import pprint
 import requests
 
-headers = {'Content-type': 'application/json'}
-
 # demo account API_KEY
 # https://iothook.com/en/device/data/650/
 # 650 - iot_get.py

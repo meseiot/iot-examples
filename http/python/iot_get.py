@@ -35,7 +35,6 @@
 import pprint
 import requests
 
-
 headers = {'Content-type': 'application/json'}
 
 # demo account API_KEY

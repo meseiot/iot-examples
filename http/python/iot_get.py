@@ -1,29 +1,26 @@
-# -*- coding: utf-8 -*-
-
 """
   Python ile IoThook REST Api Testi
 
-  Kod çalıştırıldığında APIKEY ile doğrulama gerçekleştirilir.
-  Cihaz api_key ile ilgili veriler IoThook a post edilir.
+  IoThook da her cihazin bir kimlik numarasi APIKEY' i vardir. Bu APIKEY kullanilarak veriler IoThook a post edilir.
 
-  Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde
+  Bu ornek IoThook servisine veri almak/gondermek icin baslangic seviyesinde
   testlerin yapilmasini amaclamaktadir.
 
-  20 Eylul 2017
-  Güncelleme : 19 Agustos 2019
-  Sahin MERSIN
+  v1 : 20 Eylul 2017
+  v2 : 19 Agustos 2019
+  v3 : 31 Ekim 2022
+
+  Sahin MERSIN - electrocoder
 
   Daha fazlasi icin
 
   http://www.iothook.com
-  ve
-  https://github.com/electrocoder/iotHook
+  https://www.mesebilisim.com
+  https://mesemekatronik.com
+  https://electrocoder.blogspot.com
+  https://github.com/meseiot/iotexamples
 
   sitelerine gidiniz.
-
-  Sorular ve destek talepleri icin
-  https://github.com/electrocoder/iotHook/issues
-  sayfasindan veya Meşe Bilişim den yardım alabilirsiniz.
 
   Yayin : http://mesebilisim.com
 

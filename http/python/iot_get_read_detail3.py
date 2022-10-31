@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
   Python ile IoThook REST Api Testi
 
@@ -9,21 +7,21 @@
   Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde
   testlerin yapilmasini amaclamaktadir.
 
-  20 Eylul 2017
-  Güncelleme : 19 Agustos 2019
-  Sahin MERSIN
+  v1 : 20 Eylul 2017
+  v2 : 19 Agustos 2019
+  v3 : 31 Ekim 2022
+
+  Sahin MERSIN - electrocoder
 
   Daha fazlasi icin
 
   http://www.iothook.com
-  ve
-  https://github.com/electrocoder/iotHook
+  https://www.mesebilisim.com
+  https://mesemekatronik.com
+  https://electrocoder.blogspot.com
+  https://github.com/meseiot/iotexamples
 
   sitelerine gidiniz.
-
-  Sorular ve destek talepleri icin
-  https://github.com/electrocoder/iotHook/issues
-  sayfasindan veya Meşe Bilişim den yardım alabilirsiniz.
 
   Yayin : http://mesebilisim.com
 
@@ -34,18 +32,19 @@
   http://www.apache.org/licenses/
 """
 
-import json
 import pprint
-import random
-import time
-
 import requests
 
 headers = {'Content-type': 'application/json'}
 
-url = 'http://localhost:8000/api/datas/2324/'
+# demo account API_KEY
+# https://iothook.com/en/device/data/650/
+# 650 - iot_get.py
+API_KEY = 'f1403e03949c7f9060a4bdd2'  # read api key
+url = 'http://iothook.com/api/device/?api_key=' + API_KEY
+url += '&start_date=2022-10-31'
+url += '&end_date=2022-11-01'
+url += '&results=10'
 
-for i in range(100):
-    response = requests.get(url, headers=headers)
-    pprint.pprint(response.json())
-    time.sleep(5)
+response = requests.get(url, headers=headers)
+pprint.pprint(response.json())

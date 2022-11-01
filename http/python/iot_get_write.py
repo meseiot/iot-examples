@@ -37,7 +37,7 @@ import requests
 
 # demo account API_KEY
 # https://iothook.com/en/device/data/650/
-# 650 - iot_get.py
+# 650 - iot_examples
 API_KEY = '21579c1e874fda7276d94f3c'  # write api key
 url = 'http://iothook.com/api/update/?api_key=' + API_KEY
 

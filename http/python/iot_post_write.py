@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
   Python ile IoThook REST Api Testi
 
@@ -9,22 +7,22 @@
   Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde
   testlerin yapilmasini amaclamaktadir.
 
-  20 Eylul 2017
-  Güncelleme : 19 Agustos 2019
-  Güncelleme : 21 Ekim 2021
-  Sahin MERSIN
+  v1 : 20 Eylul 2017
+  v2 : 19 Agustos 2019
+  v3 : 21 Ekim 2021
+  v4 : 31 Ekim 2022
+
+  Sahin MERSIN - electrocoder
 
   Daha fazlasi icin
 
   http://www.iothook.com
-  ve
-  https://github.com/electrocoder/iotHook
+  https://www.mesebilisim.com
+  https://mesemekatronik.com
+  https://electrocoder.blogspot.com
+  https://github.com/meseiot/iotexamples
 
   sitelerine gidiniz.
-
-  Sorular ve destek talepleri icin
-  https://github.com/electrocoder/iotHook/issues
-  sayfasindan veya Meşe Bilişim den yardım alabilirsiniz.
 
   Yayin : http://mesebilisim.com
 
@@ -42,6 +40,9 @@ import requests
 
 headers = {'Content-type': 'application/json'}
 
+# demo account API_KEY
+# https://iothook.com/en/device/data/650/
+# 650 - iot_examples
 API_KEY = '21579c1e874fda7276d94f3c'  # write api key
 url = 'http://iothook.com/api/update/'
 

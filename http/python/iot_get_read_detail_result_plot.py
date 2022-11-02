@@ -1,29 +1,28 @@
-# -*- coding: utf-8 -*-
-
 """
   Python ile IoThook REST Api Testi
 
-  Kod çalıştırıldığında APIKEY ile doğrulama gerçekleştirilir.
-  Cihaz api_key ile ilgili veriler IoThook a post edilir.
+  IoThook'da her cihazin bir kimlik numarasi APIKEY'i vardir.
+  Bu APIKEY kullanilarak veriler IoThook'a GET metodu gonderilir ve cihaz detay verileri alinir.
+  matplotlib kullanilarak grafik cizilir.
 
   Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde
   testlerin yapilmasini amaclamaktadir.
 
-  11 Eylul 2017
-  Güncelleme : 19 Agustos 2019
-  Sahin MERSIN
+  v1 : 11 Eylul 2017
+  v2 : 19 Agustos 2019
+  v3 : 31 Ekim 2022
+
+  Sahin MERSIN - electrocoder
 
   Daha fazlasi icin
 
   http://www.iothook.com
-  ve
-  https://github.com/electrocoder/iotHook
+  https://www.mesebilisim.com
+  https://mesemekatronik.com
+  https://electrocoder.blogspot.com
+  https://github.com/meseiot/iotexamples
 
   sitelerine gidiniz.
-
-  Sorular ve destek talepleri icin
-  https://github.com/electrocoder/iotHook/issues
-  sayfasindan veya Meşe Bilişim den yardım alabilirsiniz.
 
   Yayin : http://mesebilisim.com
 
@@ -34,25 +33,15 @@
   http://www.apache.org/licenses/
 """
 
-import json
-import pprint
-import random
+import threading
 import time
-
 from tkinter import *
 from tkinter.ttk import Frame, Button, Label
-import socket
-import threading
-import configparser
 
 import requests
 from matplotlib.backends.backend_tkagg import (
-    FigureCanvasTkAgg, NavigationToolbar2Tk)
-# Implement the default Matplotlib key bindings.
-from matplotlib.backend_bases import key_press_handler
+    FigureCanvasTkAgg)
 from matplotlib.figure import Figure
-
-import numpy as np
 
 
 class Window(Frame):
@@ -86,15 +75,9 @@ class Window(Frame):
 
         self.api_entry = Entry(self)
         self.api_entry.place(x=70, y=10)
-        #
-        # self.row = 0
-        # self.column += 1
-        #
+
         self.connect = Button(self, text="Connect", command=self.connect_command)
         self.connect.place(x=270, y=10)
-
-        # self.row += 1
-        # self.column = 0
 
         self.field_1_label = Label(self, text="Field 1")
         self.field_1_label.place(x=10, y=40)
@@ -104,10 +87,7 @@ class Window(Frame):
 
         self.field_1 = Checkbutton(self, width=5)
         self.field_1.place(x=110, y=40)
-        #
-        # self.row += 1
-        # self.column = 0
-        #
+
         self.field_2_label = Label(self, text="Field 2")
         self.field_2_label.place(x=10, y=60)
 
@@ -116,10 +96,7 @@ class Window(Frame):
 
         self.field_2 = Checkbutton(self, width=5)
         self.field_2.place(x=110, y=60)
-        #
-        # self.row += 1
-        # self.column = 0
-        #
+
         self.field_3_label = Label(self, text="Field 3")
         self.field_3_label.place(x=10, y=80)
 
@@ -128,10 +105,7 @@ class Window(Frame):
 
         self.field_3 = Checkbutton(self, width=5)
         self.field_3.place(x=110, y=80)
-        #
-        # self.row += 1
-        # self.column = 0
-        #
+
         self.field_4_label = Label(self, text="Field 4")
         self.field_4_label.place(x=10, y=100)
 
@@ -140,10 +114,7 @@ class Window(Frame):
 
         self.field_4 = Checkbutton(self, width=5)
         self.field_4.place(x=110, y=100)
-        #
-        # self.row += 1
-        # self.column = 0
-        #
+
         self.received_graph_label = Label(self, text="Received Data Graph")
         self.received_graph_label.place(x=10, y=140)
 
@@ -159,7 +130,7 @@ class Window(Frame):
 
     def thread_function(self):
         while True:
-            API_KEY = 'ceb0024b84ff6fb7527d5506'  # demo hesap #17 random test
+            API_KEY = 'f1403e03949c7f9060a4bdd2'  # demo hesap #17 random test
             url = 'http://iothook.com/api/device/?api_key=' + API_KEY + "&results=1"
 
             response = requests.get(url)
@@ -181,8 +152,6 @@ class Window(Frame):
     def connect_command(self):
         self.x = threading.Thread(target=self.thread_function, daemon=True)
         self.x.start()
-
-
 
     def on_closing(self):
         self.master.destroy()

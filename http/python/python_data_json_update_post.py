@@ -1,29 +1,28 @@
-# -*- coding: utf-8 -*-
-
 """
   Python ile IoThook REST Api Testi
 
-  Kod çalıştırıldığında APIKEY ile doğrulama gerçekleştirilir.
-  Cihaz api_key ile ilgili veriler IoThook a post edilir.
+  IoThook'da her cihazin bir kimlik numarasi APIKEY'i vardir.
+  Bu APIKEY kullanilarak veriler IoThook'a POST metodu ile gonderilir.
+  5 kere 15 saniyede bir random verileri iothook'a gonderir.
 
   Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde
   testlerin yapilmasini amaclamaktadir.
 
-  11 Eylul 2017
-  Güncelleme : 19 Agustos 2019
-  Sahin MERSIN
+  v1 : 11 Eylul 2017
+  v2 : 19 Agustos 2019
+  v3 : 31 Ekim 2022
+
+  Sahin MERSIN - electrocoder
 
   Daha fazlasi icin
 
   http://www.iothook.com
-  ve
-  https://github.com/electrocoder/iotHook
+  https://www.mesebilisim.com
+  https://mesemekatronik.com
+  https://electrocoder.blogspot.com
+  https://github.com/meseiot/iotexamples
 
   sitelerine gidiniz.
-
-  Sorular ve destek talepleri icin
-  https://github.com/electrocoder/iotHook/issues
-  sayfasindan veya Meşe Bilişim den yardım alabilirsiniz.
 
   Yayin : http://mesebilisim.com
 
@@ -43,11 +42,15 @@ import requests
 
 headers = {'Content-type': 'application/json'}
 
+# demo account API_KEY
+# https://iothook.com/en/device/data/650/
+# 650 - iot_examples
+API_KEY = '21579c1e874fda7276d94f3c'  # write api key
 url = 'http://iothook.com/api/update/'
 
-for i in range(100):
+for i in range(5):
     data = {  # write api key
-        'api_key': '78b0ca6a4a7da7e20f689818',  # demo hesap #17 random test
+        'api_key': API_KEY,  # demo hesap #650 - iot_examples
         'field_1': random.randint(1, 10),
         'field_2': round(random.uniform(0.0, 10.0), 2),
     }

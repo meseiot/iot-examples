@@ -1,8 +1,8 @@
 """
   Python ile IoThook REST Api Testi
 
-  Kod çalıştırıldığında APIKEY ile doğrulama gerçekleştirilir.
-  Cihaz api_key ile ilgili veriler IoThook a post edilir.
+  IoThook'da her cihazin bir kimlik numarasi APIKEY'i vardir.
+  Bu APIKEY kullanilarak veriler IoThook'a GET metodu gonderilir ve cihaz detay verileri alinir.
 
   Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde
   testlerin yapilmasini amaclamaktadir.
@@ -39,7 +39,7 @@ headers = {'Content-type': 'application/json'}
 
 # demo account API_KEY
 # https://iothook.com/en/device/data/650/
-# 650 - iot_get.py
+# 650 - iot_examples
 API_KEY = 'f1403e03949c7f9060a4bdd2'  # read api key
 url = 'http://iothook.com/api/device/?api_key=' + API_KEY
 

@@ -130,7 +130,10 @@ class Window(Frame):
 
     def thread_function(self):
         while True:
-            API_KEY = 'f1403e03949c7f9060a4bdd2'  # demo hesap #17 random test
+            # demo account API_KEY
+            # https://iothook.com/en/device/data/650/
+            # 650 - iot_examples
+            API_KEY = 'f1403e03949c7f9060a4bdd2'  # read api key
             url = 'http://iothook.com/api/device/?api_key=' + API_KEY + "&results=1"
 
             response = requests.get(url)

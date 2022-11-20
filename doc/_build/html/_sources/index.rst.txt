@@ -8,7 +8,7 @@ Welcome to iothook's documentation!
 
 .. toctree::
    :maxdepth: 10
-   :caption: İçindekiler:
+   :caption: Sahinİçindekiler:
 
    what-is-iot.rst
    what-is-iothook.rst

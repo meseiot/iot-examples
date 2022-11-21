@@ -1,14 +1,14 @@
 # IOT Examples
 
-IoT Cihazı ile Post, Get, Publish, Subscribe Yöntemleri
-=======================================================
+IoT Cihazı ile Post, Get, Publish, Subscribe Methods
+====================================================
 
-IoT HTTP Metodu
+IoT HTTP Method
 ---------------
 
-IoT MQTT Metodu
+* Send Data <https://iot-examples.readthedocs.io/en/latest/send-data.html>
+
+IoT MQTT Method
 ---------------
 
-
-
-
+* Send Data <https://iot-examples.readthedocs.io/en/latest/send-data.html>

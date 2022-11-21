@@ -2,17 +2,19 @@
 Add New Device
 **************
 
-Iothook; internete bağlı nesneler arasında veri iletimini sağlamak için oluşturulmuş
-web servisidir. Cihaz ile diğer iot sistemleri veri paylaşımı yapabilir, birbirlerini tetikleyerek çalıştırabilir.
+IoThook; created to enable data transmission between internet-connected objects is a web service. The device and
+other iot systems can share data and operate by triggering each other.
 
-Iothook web servislerini kullanabilmek için üye olunmalıdır.
+You must be a member to use IoThook web services.
 
-Üyelik adımından sonra yönetim paneli aracılığı ile ‘Cihaz Ekle’ ekranına girilir.
+After the membership step, the 'Add Device' screen is entered via the administration panel. Add Device screens are
+divided into HTTP and MQTT. Continue by choosing the appropriate one according to the working protocol of your IoT
+device.
 
-Cihaz Ekle
-----------
+Add HTTP Device
+---------------
 
-Cihaz ekleme adımları şu şekildedir:
+HTTP The steps to add devices are as follows:
 
     * İsim: Cihaza bir isim verilir. Hatırlamak için Ev Misafir Odası Sıcaklık gibi isimlendirilebilir.
     * Etiket(ler): Cihaz için tanımlama etiketleri kullanılır.

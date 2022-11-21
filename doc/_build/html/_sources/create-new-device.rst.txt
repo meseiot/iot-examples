@@ -1,6 +1,6 @@
-**********
-Cihaz Ekle
-**********
+**************
+Add New Device
+**************
 
 Iothook; internete bağlı nesneler arasında veri iletimini sağlamak için oluşturulmuş
 web servisidir. Cihaz ile diğer iot sistemleri veri paylaşımı yapabilir, birbirlerini tetikleyerek çalıştırabilir.

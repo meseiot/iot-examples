@@ -33,11 +33,21 @@ HTTP The steps to add devices are as follows:
     * Response: Response detail Enable/Disable (Return record ID is response False, else return all field value and timestamp)
     * Is Public: Share Device and data.
 
-Sensör Ekle
------------
+Add Sensor
+----------
 
-Iot cihazınız için bulunmasını istediğiniz veri alanlarını oluşturmalısınız. Bu alanlar veri almaya başlamak
-için eklenir. En az 1 alan eklenmelidir. Sensörler Nem, Isı, Oksijen, Rüzgar gibi isimlendirilebilir.
+For IoT systems, you must create the data fields you want to exist. Start importing data into these fields
+is added for. At least 1 field must be added. Sensors can be named as Humidity, Heat, Oxygen, Wind.
 
-    * Alan Tipi: Sensörün tipi seçilir. Bu işlem insan okumasını kolaylaştırmak için yapılır.
-    * Alan Adı: Sensöre bir isim verilir.
+    * 1.Field Type: Select Field Type (First field is required)
+    * 1.Field Name: Enter a field name (First field is required)
+    * 2-8.Field Type: Select Field Type (Optional)
+    * 2-8.Field Name: Enter a field name (Optional)
+
+Add MQTT Device
+---------------
+
+HTTP The steps to add devices are as follows:
+
+    * Log in to your DEMO account with the free login button, if you already have an account, log in.
+    * Add HTTP Device button is click.

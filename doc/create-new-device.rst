@@ -16,14 +16,22 @@ Add HTTP Device
 
 HTTP The steps to add devices are as follows:
 
-    * İsim: Cihaza bir isim verilir. Hatırlamak için Ev Misafir Odası Sıcaklık gibi isimlendirilebilir.
-    * Etiket(ler): Cihaz için tanımlama etiketleri kullanılır.
-    * Web Site Adresi: Bir proje için kullanılacak ise adres yazılır.
-    * Git Web Site Adresi: Kaynak kodlar veriliyor ise adres yazılır.
-    * Lokasyon Göster: Harita üzerinde gelen verilerin kaynağı gösterilir.
-    * Video Adresi: Tanıtım videosu var ise adres yazılır.
-    * Açıklama: Projeye ait detaylı açıklama yazılabilir.
-    * Aktif: Cihazın Aktif/Pasif yapılması buradan sağlanır.
+    * Log in to your DEMO account with the free login button, if you already have an account, log in.
+    * Add HTTP Device button is click.
+    * Name: Enter device name. To remember, the Home Guest Room can be named like Temperature.
+    * 1.Field Type: Select Field Type (First field is required)
+    * 1.Field Name: Enter a field name (First field is required)
+    * 2-8.Field Type: Select Field Type (Optional)
+    * 2-8.Field Name: Enter a field name (Optional)
+    * Label(s): Label(s) write please (Optional)
+    * Website address: Please Website address.
+    * Git Website address: Git Website address, for source code.
+    * Show Location: The incoming data source is shown on the map.
+    * Video address: Video URL address, If there is a promotional video, the address is written.
+    * Description: Detailed description of the project can be written.
+    * Enable: Active/Passive setting of the device is provided here.
+    * Response: Response detail Enable/Disable (Return record ID is response False, else return all field value and timestamp)
+    * Is Public: Share Device and data.
 
 Sensör Ekle
 -----------

@@ -2,7 +2,7 @@
 
 <!doctype html>
 
-<html lang="tr">
+<html lang="en,tr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,14 +14,11 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/translations.js"></script>
     <script src="_static/bizstyle.js"></script>
     <link rel="shortcut icon" href="_static/internet-of-things.png"/>
-    <link rel="index" title="Dizin" href="genindex.html" />
-    <link rel="search" title="Ara" href="search.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Veri Gönder" href="send-data.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--[if lt IE 9]>
@@ -29,14 +26,14 @@
     <![endif]-->
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Gezinti</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="Genel Dizin"
-             accesskey="I">dizin</a></li>
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
           <a href="send-data.html" title="Veri Gönder"
-             accesskey="P">önceki</a> |</li>
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">IoT Internet Of Things Project</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Veri Al</a></li> 
       </ul>
@@ -48,14 +45,14 @@
           <div class="body" role="main">
             
   <section id="veri-al">
-<h1>Veri Al<a class="headerlink" href="#veri-al" title="Permalink to this heading">¶</a></h1>
+<h1>Veri Al<a class="headerlink" href="#veri-al" title="Permalink to this headline">¶</a></h1>
 <p>Iot cihazından gönderilen ısı, nem, voltaj, ışık gibi değerleri iothook data servisinden çekebilmek için öncelikle
 cihaz API KEY bilgisine ihtiyaç vardır. Iot cihazından gelen veriler, Arduino, Raspberry Pi, Android, iOS gibi mobil
 cihazınızdan veya web sitenizden izlenebilir.</p>
-<p>Örneğin; Cihaz adımız “Temperature sensor” olarak belirlenmiş ve cihaz içerisinde bulunacak
-sensörlerimiz “temperature” ve “humidity” olsun.</p>
+<p>Örneğin; Cihaz adımız &quot;Temperature sensor&quot; olarak belirlenmiş ve cihaz içerisinde bulunacak
+sensörlerimiz &quot;temperature&quot; ve &quot;humidity&quot; olsun.</p>
 <section id="python-2-python-3-json-ile-veri-alma">
-<h2>Python 2, Python 3 Json ile Veri Alma<a class="headerlink" href="#python-2-python-3-json-ile-veri-alma" title="Permalink to this heading">¶</a></h2>
+<h2>Python 2, Python 3 Json ile Veri Alma<a class="headerlink" href="#python-2-python-3-json-ile-veri-alma" title="Permalink to this headline">¶</a></h2>
 <p>Python Json ile Get Örneği:</p>
 <p>IOTHOOK sunucusundan <em>requests.get</em> metodu kullanılarak <em>results</em> ile belirtilen sayı kadar veri okuması yapılmıştır.
 <em>results</em> değişkeni ile en fazla 99 adet veri okunabilir. <em>results</em> değişkeni belirtilmez ise sadece 1 veri okunabilir.
@@ -117,7 +114,7 @@ Okunan verinin formatı <em>json</em> şeklindedir.</p>
 </div>
 </section>
 <section id="python-2-python-3-json-ile-ilk-veriyi-alma">
-<h2>Python 2, Python 3 Json ile İlk Veriyi Alma<a class="headerlink" href="#python-2-python-3-json-ile-ilk-veriyi-alma" title="Permalink to this heading">¶</a></h2>
+<h2>Python 2, Python 3 Json ile İlk Veriyi Alma<a class="headerlink" href="#python-2-python-3-json-ile-ilk-veriyi-alma" title="Permalink to this headline">¶</a></h2>
 <p>Python İlk Veriyi Alma, Json ile Get Örneği:</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
@@ -172,7 +169,7 @@ Okunan verinin formatı <em>json</em> şeklindedir.</p>
 </div>
 </section>
 <section id="python-2-python-3-json-ile-son-veriyi-alma">
-<h2>Python 2, Python 3 Json ile Son Veriyi Alma<a class="headerlink" href="#python-2-python-3-json-ile-son-veriyi-alma" title="Permalink to this heading">¶</a></h2>
+<h2>Python 2, Python 3 Json ile Son Veriyi Alma<a class="headerlink" href="#python-2-python-3-json-ile-son-veriyi-alma" title="Permalink to this headline">¶</a></h2>
 <p>Python Son Veriyi Alma, Json ile Get Örneği:</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
@@ -225,7 +222,7 @@ Okunan verinin formatı <em>json</em> şeklindedir.</p>
 </div>
 </section>
 <section id="c-ile-json-formatinda-veri-alma">
-<h2>C# ile Json Formatında Veri Alma<a class="headerlink" href="#c-ile-json-formatinda-veri-alma" title="Permalink to this heading">¶</a></h2>
+<h2>C# ile Json Formatında Veri Alma<a class="headerlink" href="#c-ile-json-formatinda-veri-alma" title="Permalink to this headline">¶</a></h2>
 <p>IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
@@ -259,88 +256,88 @@ Okunan verinin formatı <em>json</em> şeklindedir.</p>
 <span class="cm">  A copy of the License is located at</span>
 
 <span class="cm">  http://www.apache.org/licenses/</span>
-<span class="cm">*/</span><span class="w"></span>
+<span class="cm">*/</span>
 
 <span class="c1">// demo hesap #24 Temperature sensor</span>
 
-<span class="kt">var</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RestClient</span><span class="p">(</span><span class="s">&quot;https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&amp;results=1&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="kt">var</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RestRequest</span><span class="p">(</span><span class="n">Method</span><span class="p">.</span><span class="n">GET</span><span class="p">);</span><span class="w"></span>
-<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no-cache&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Connection&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;keep-alive&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Accept-Encoding&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;gzip, deflate&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Host&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;iothook.com&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Postman-Token&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ce2f06c2-817e-414a-8c7a-2c2fc59ad043,af31a3d8-02e4-49eb-b78f-05ebdce70149&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Cache-Control&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no-cache&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Accept&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*/*&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;User-Agent&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PostmanRuntime/7.15.2&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">IRestResponse</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">request</span><span class="p">);</span><span class="w"></span>
+<span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RestClient</span><span class="p">(</span><span class="s">&quot;https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&amp;results=1&quot;</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RestRequest</span><span class="p">(</span><span class="n">Method</span><span class="p">.</span><span class="n">GET</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span> <span class="s">&quot;no-cache&quot;</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Connection&quot;</span><span class="p">,</span> <span class="s">&quot;keep-alive&quot;</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Accept-Encoding&quot;</span><span class="p">,</span> <span class="s">&quot;gzip, deflate&quot;</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Host&quot;</span><span class="p">,</span> <span class="s">&quot;iothook.com&quot;</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Postman-Token&quot;</span><span class="p">,</span> <span class="s">&quot;ce2f06c2-817e-414a-8c7a-2c2fc59ad043,af31a3d8-02e4-49eb-b78f-05ebdce70149&quot;</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Cache-Control&quot;</span><span class="p">,</span> <span class="s">&quot;no-cache&quot;</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Accept&quot;</span><span class="p">,</span> <span class="s">&quot;*/*&quot;</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;User-Agent&quot;</span><span class="p">,</span> <span class="s">&quot;PostmanRuntime/7.15.2&quot;</span><span class="p">);</span>
+<span class="n">IRestResponse</span> <span class="n">response</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="go-ile-iot-veri-alma">
-<h2>GO ile IOT Veri Alma<a class="headerlink" href="#go-ile-iot-veri-alma" title="Permalink to this heading">¶</a></h2>
+<h2>GO ile IOT Veri Alma<a class="headerlink" href="#go-ile-iot-veri-alma" title="Permalink to this headline">¶</a></h2>
 <p>IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
-<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;io/ioutil&quot;</span><span class="w"></span>
-<span class="p">)</span><span class="w"></span>
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;net/http&quot;</span>
+    <span class="s">&quot;io/ioutil&quot;</span>
+<span class="p">)</span>
 
-<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-<span class="w">    </span><span class="nx">url</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&amp;results=1&quot;</span><span class="w"></span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&amp;results=1&quot;</span>
 
-<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+    <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
-<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;User-Agent&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PostmanRuntime/7.15.2&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Accept&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*/*&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Cache-Control&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no-cache&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Postman-Token&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ce2f06c2-817e-414a-8c7a-2c2fc59ad043,8a0938fc-5c87-459a-9b9f-fa6aebe561f2&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Host&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;iothook.com&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Accept-Encoding&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;gzip, deflate&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Connection&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;keep-alive&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no-cache&quot;</span><span class="p">)</span><span class="w"></span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;User-Agent&quot;</span><span class="p">,</span> <span class="s">&quot;PostmanRuntime/7.15.2&quot;</span><span class="p">)</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Accept&quot;</span><span class="p">,</span> <span class="s">&quot;*/*&quot;</span><span class="p">)</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Cache-Control&quot;</span><span class="p">,</span> <span class="s">&quot;no-cache&quot;</span><span class="p">)</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Postman-Token&quot;</span><span class="p">,</span> <span class="s">&quot;ce2f06c2-817e-414a-8c7a-2c2fc59ad043,8a0938fc-5c87-459a-9b9f-fa6aebe561f2&quot;</span><span class="p">)</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Host&quot;</span><span class="p">,</span> <span class="s">&quot;iothook.com&quot;</span><span class="p">)</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Accept-Encoding&quot;</span><span class="p">,</span> <span class="s">&quot;gzip, deflate&quot;</span><span class="p">)</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;Connection&quot;</span><span class="p">,</span> <span class="s">&quot;keep-alive&quot;</span><span class="p">)</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span> <span class="s">&quot;no-cache&quot;</span><span class="p">)</span>
 
-<span class="w">    </span><span class="nx">res</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">DefaultClient</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span><span class="w"></span>
+    <span class="nx">res</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">DefaultClient</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
 
-<span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
-<span class="w">    </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span><span class="w"></span>
+    <span class="k">defer</span> <span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+    <span class="nx">body</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
 
-<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">))</span><span class="w"></span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">))</span>
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="java-ile-iot-veri-alma">
-<h2>JAVA ile IOT Veri Alma<a class="headerlink" href="#java-ile-iot-veri-alma" title="Permalink to this heading">¶</a></h2>
+<h2>JAVA ile IOT Veri Alma<a class="headerlink" href="#java-ile-iot-veri-alma" title="Permalink to this headline">¶</a></h2>
 <p>IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">OkHttpClient</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OkHttpClient</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">OkHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OkHttpClient</span><span class="p">();</span>
 
-<span class="n">Request</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Request</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">url</span><span class="p">(</span><span class="s">&quot;https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&amp;results=1&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">get</span><span class="p">()</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;User-Agent&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PostmanRuntime/7.15.2&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Accept&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*/*&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Cache-Control&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no-cache&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Postman-Token&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ce2f06c2-817e-414a-8c7a-2c2fc59ad043,bdcd2494-5109-4621-8256-296e0c6a4fad&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Host&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;iothook.com&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Accept-Encoding&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;gzip, deflate&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Connection&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;keep-alive&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no-cache&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">build</span><span class="p">();</span><span class="w"></span>
+<span class="n">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Request</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+  <span class="p">.</span><span class="na">url</span><span class="p">(</span><span class="s">&quot;https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&amp;results=1&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">get</span><span class="p">()</span>
+  <span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;User-Agent&quot;</span><span class="p">,</span> <span class="s">&quot;PostmanRuntime/7.15.2&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Accept&quot;</span><span class="p">,</span> <span class="s">&quot;*/*&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Cache-Control&quot;</span><span class="p">,</span> <span class="s">&quot;no-cache&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Postman-Token&quot;</span><span class="p">,</span> <span class="s">&quot;ce2f06c2-817e-414a-8c7a-2c2fc59ad043,bdcd2494-5109-4621-8256-296e0c6a4fad&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Host&quot;</span><span class="p">,</span> <span class="s">&quot;iothook.com&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Accept-Encoding&quot;</span><span class="p">,</span> <span class="s">&quot;gzip, deflate&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Connection&quot;</span><span class="p">,</span> <span class="s">&quot;keep-alive&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span> <span class="s">&quot;no-cache&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">build</span><span class="p">();</span>
 
-<span class="n">Response</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="na">newCall</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span><span class="w"></span>
+<span class="n">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="na">newCall</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>
 <section id="php-ile-iot-veri-alma">
-<h2>PHP ile IOT Veri Alma<a class="headerlink" href="#php-ile-iot-veri-alma" title="Permalink to this heading">¶</a></h2>
+<h2>PHP ile IOT Veri Alma<a class="headerlink" href="#php-ile-iot-veri-alma" title="Permalink to this headline">¶</a></h2>
 <p>IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
@@ -376,7 +373,7 @@ Okunan verinin formatı <em>json</em> şeklindedir.</p>
 </div>
 </section>
 <section id="ruby-ile-iot-veri-alma">
-<h2>Ruby ile IOT Veri Alma<a class="headerlink" href="#ruby-ile-iot-veri-alma" title="Permalink to this heading">¶</a></h2>
+<h2>Ruby ile IOT Veri Alma<a class="headerlink" href="#ruby-ile-iot-veri-alma" title="Permalink to this headline">¶</a></h2>
 <p>IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;uri&#39;</span>
@@ -402,34 +399,34 @@ Okunan verinin formatı <em>json</em> şeklindedir.</p>
 </div>
 </section>
 <section id="javascript-ajax-ile-iot-veri-alma">
-<h2>Javascript Ajax ile IOT Veri Alma<a class="headerlink" href="#javascript-ajax-ile-iot-veri-alma" title="Permalink to this heading">¶</a></h2>
+<h2>Javascript Ajax ile IOT Veri Alma<a class="headerlink" href="#javascript-ajax-ile-iot-veri-alma" title="Permalink to this headline">¶</a></h2>
 <p>IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;async&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;crossDomain&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&amp;results=1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;method&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;headers&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;User-Agent&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PostmanRuntime/7.15.2&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;Accept&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;*/*&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;Cache-Control&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no-cache&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;Postman-Token&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ce2f06c2-817e-414a-8c7a-2c2fc59ad043,27a5bb35-4b13-48b2-8dbd-efe7188a68c6&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;Host&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;iothook.com&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;Accept-Encoding&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;gzip, deflate&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;Connection&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;keep-alive&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;cache-control&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no-cache&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;async&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">&quot;crossDomain&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&amp;results=1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;method&quot;</span><span class="o">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;headers&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;User-Agent&quot;</span><span class="o">:</span> <span class="s2">&quot;PostmanRuntime/7.15.2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Accept&quot;</span><span class="o">:</span> <span class="s2">&quot;*/*&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Cache-Control&quot;</span><span class="o">:</span> <span class="s2">&quot;no-cache&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Postman-Token&quot;</span><span class="o">:</span> <span class="s2">&quot;ce2f06c2-817e-414a-8c7a-2c2fc59ad043,27a5bb35-4b13-48b2-8dbd-efe7188a68c6&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Host&quot;</span><span class="o">:</span> <span class="s2">&quot;iothook.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Accept-Encoding&quot;</span><span class="o">:</span> <span class="s2">&quot;gzip, deflate&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Connection&quot;</span><span class="o">:</span> <span class="s2">&quot;keep-alive&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cache-control&quot;</span><span class="o">:</span> <span class="s2">&quot;no-cache&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 
-<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
 </pre></div>
 </div>
 </section>
 <section id="python-pyside2-ile-iot-veri-alma">
-<h2>Python PySide2 ile IOT Veri Alma<a class="headerlink" href="#python-pyside2-ile-iot-veri-alma" title="Permalink to this heading">¶</a></h2>
+<h2>Python PySide2 ile IOT Veri Alma<a class="headerlink" href="#python-pyside2-ile-iot-veri-alma" title="Permalink to this headline">¶</a></h2>
 <p>PySide2, Qt nin Python projelerinde Qt 5.12+ framework e erişimini sağlayan resmi Python modülüdür. PySide2 yi
 kullanmadan önce yüklenmesi gereken modüller şu şekildedir.</p>
 <blockquote>
@@ -444,7 +441,7 @@ adresine giderek dosyayı bilgisayarınıza kaydediniz ve çalıştırınız.</p
 <figure class="align-center">
 <img alt="pyside2-matplotlib-iothook.png" src="_images/pyside2-matplotlib-iothook.png" />
 </figure>
-<p>Bu örnekde <em>QT Designer</em> kullanılarak arayüz tasarımı yapılmıştır. Widget için <em>Promote to …</em> seçeneği ile <em>MplWidget</em>
+<p>Bu örnekde <em>QT Designer</em> kullanılarak arayüz tasarımı yapılmıştır. Widget için <em>Promote to ...</em> seçeneği ile <em>MplWidget</em>
 sınıfı kullanılmıştır. Bu örneği hazırlamada <em>manap.se</em> <a class="reference external" href="https://blog.manap.se/pyqt/bolum3/plot.html">Manap</a> ve <em>yapayzekalabs.blogspot.com</em> <a class="reference external" href="http://yapayzekalabs.blogspot.com/2018/11/pyside2-gui-qt-designer-matplotlib.html">Yapayzekalabs</a>
 sitelerinden faydalandım. Bu sitelerde daha fazla kaynak bulabilirsiniz.</p>
 <dl class="simple">
@@ -467,60 +464,66 @@ sitelerinden faydalandım. Bu sitelerde daha fazla kaynak bulabilirsiniz.</p>
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/internet-of-things.png" alt="Logo"/>
             </a></p>
-  <div>
-    <h3><a href="index.html">İçindekiler</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Veri Al</a><ul>
-<li><a class="reference internal" href="#python-2-python-3-json-ile-veri-alma">Python 2, Python 3 Json ile Veri Alma</a></li>
-<li><a class="reference internal" href="#python-2-python-3-json-ile-ilk-veriyi-alma">Python 2, Python 3 Json ile İlk Veriyi Alma</a></li>
-<li><a class="reference internal" href="#python-2-python-3-json-ile-son-veriyi-alma">Python 2, Python 3 Json ile Son Veriyi Alma</a></li>
-<li><a class="reference internal" href="#c-ile-json-formatinda-veri-alma">C# ile Json Formatında Veri Alma</a></li>
-<li><a class="reference internal" href="#go-ile-iot-veri-alma">GO ile IOT Veri Alma</a></li>
-<li><a class="reference internal" href="#java-ile-iot-veri-alma">JAVA ile IOT Veri Alma</a></li>
-<li><a class="reference internal" href="#php-ile-iot-veri-alma">PHP ile IOT Veri Alma</a></li>
-<li><a class="reference internal" href="#ruby-ile-iot-veri-alma">Ruby ile IOT Veri Alma</a></li>
-<li><a class="reference internal" href="#javascript-ajax-ile-iot-veri-alma">Javascript Ajax ile IOT Veri Alma</a></li>
-<li><a class="reference internal" href="#python-pyside2-ile-iot-veri-alma">Python PySide2 ile IOT Veri Alma</a></li>
+<h3><a href="index.html">Table of Contents</a></h3>
+<p class="caption" role="heading"><span class="caption-text">Sahinİçindekiler:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="what-is-iot.html">What is IOT?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what-is-iothook.html">IOTHOOK Nedir?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="why-iothook.html">Niçin Iothook?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-new-device.html">Cihaz Ekle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="send-data.html">Veri Gönder</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Veri Al</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-2-python-3-json-ile-veri-alma">Python 2, Python 3 Json ile Veri Alma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-2-python-3-json-ile-ilk-veriyi-alma">Python 2, Python 3 Json ile İlk Veriyi Alma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-2-python-3-json-ile-son-veriyi-alma">Python 2, Python 3 Json ile Son Veriyi Alma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-ile-json-formatinda-veri-alma">C# ile Json Formatında Veri Alma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#go-ile-iot-veri-alma">GO ile IOT Veri Alma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#java-ile-iot-veri-alma">JAVA ile IOT Veri Alma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#php-ile-iot-veri-alma">PHP ile IOT Veri Alma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ruby-ile-iot-veri-alma">Ruby ile IOT Veri Alma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-ajax-ile-iot-veri-alma">Javascript Ajax ile IOT Veri Alma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-pyside2-ile-iot-veri-alma">Python PySide2 ile IOT Veri Alma</a></li>
 </ul>
 </li>
 </ul>
 
-  </div>
-  <div>
-    <h4>Önceki konu</h4>
-    <p class="topless"><a href="send-data.html"
-                          title="önceki bölüm">Veri Gönder</a></p>
-  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/read-data.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Hızlı Arama</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Git" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Gezinti</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="Genel Dizin"
-             >dizin</a></li>
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
           <a href="send-data.html" title="Veri Gönder"
-             >önceki</a> |</li>
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">IoT Internet Of Things Project</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Veri Al</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Telif hakkı 2022, electrocoder.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+        &#169; Copyright 2022, electrocoder.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
     </div>
   </body>
 </html>

@@ -2,7 +2,7 @@
 
 <!doctype html>
 
-<html lang="tr">
+<html lang="en,tr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,14 +14,11 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/translations.js"></script>
     <script src="_static/bizstyle.js"></script>
     <link rel="shortcut icon" href="_static/internet-of-things.png"/>
-    <link rel="index" title="Dizin" href="genindex.html" />
-    <link rel="search" title="Ara" href="search.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Veri Al" href="read-data.html" />
     <link rel="prev" title="Cihaz Ekle" href="create-new-device.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -30,17 +27,17 @@
     <![endif]-->
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Gezinti</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="Genel Dizin"
-             accesskey="I">dizin</a></li>
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
           <a href="read-data.html" title="Veri Al"
-             accesskey="N">sonraki</a> |</li>
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="create-new-device.html" title="Cihaz Ekle"
-             accesskey="P">önceki</a> |</li>
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">IoT Internet Of Things Project</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Veri Gönder</a></li> 
       </ul>
@@ -52,14 +49,14 @@
           <div class="body" role="main">
             
   <section id="veri-gonder">
-<h1>Veri Gönder<a class="headerlink" href="#veri-gonder" title="Permalink to this heading">¶</a></h1>
+<h1>Veri Gönder<a class="headerlink" href="#veri-gonder" title="Permalink to this headline">¶</a></h1>
 <p>Veri göndermek için öncelikle cihaz eklemeniz gerekir. Cihaz oluşturulduğunda
-size özel okuma ve yazma “API KEY” üretilerek belirlenen erişim metoduna göre (POST, GET, POST/GET) veri işlemi gerçekleştirilir.</p>
+size özel okuma ve yazma &quot;API KEY&quot; üretilerek belirlenen erişim metoduna göre (POST, GET, POST/GET) veri işlemi gerçekleştirilir.</p>
 <p>Örneğin; Cihazımız ısı, ışık, hareket, bar ve nem değerlerini alan bir yapıda olsun.
 Cihaz içerisinde bulunacak sensörlerimiz bizlere bu dataları 15 saniyede bir ve toplamda 100 kere göndersin.</p>
 <p>Oluşturulan Okuma ve Yazma API Key Yöneticisi sayfasından görülebilir.</p>
 <section id="python-ile-json-veri-gonderme">
-<h2>Python ile JSON Veri Gönderme<a class="headerlink" href="#python-ile-json-veri-gonderme" title="Permalink to this heading">¶</a></h2>
+<h2>Python ile JSON Veri Gönderme<a class="headerlink" href="#python-ile-json-veri-gonderme" title="Permalink to this headline">¶</a></h2>
 <p>Python ile IOT sunucularına veri göndermek için kullanacağımız API ENDPOINT adresi <em>https://iothook.com/api/update/</em> dir.
 Veri göndermek için yazma <em>api_key</em> bilgisine ihtiyaç vardır. Bu KEY e cihaz <strong>detail</strong> sayfasından ulaşabilirsiniz.</p>
 <p>Veri göndermek için olmazsa olmaz 2 alan vardır. Bunlar <strong>api_key ve field_1</strong> alanlarıdır. APIKEY cihaz sahipliğinizi
@@ -203,7 +200,7 @@ gerçekleştiriyoruz. Örnek çıktı:</p>
 </div>
 </section>
 <section id="python-get-metodu-ile-veri-gonderme">
-<h2>Python GET Metodu ile Veri Gönderme<a class="headerlink" href="#python-get-metodu-ile-veri-gonderme" title="Permalink to this heading">¶</a></h2>
+<h2>Python GET Metodu ile Veri Gönderme<a class="headerlink" href="#python-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h2>
 <p>IOThook Api güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <p>Python ile Get Metodu Kullanarak Veri Gönderme Örneği:</p>
@@ -263,7 +260,7 @@ gerçekleştiriyoruz. Örnek çıktı:</p>
 </div>
 </section>
 <section id="arduino-esp8266-post-metodu-ile-veri-gonderme">
-<h2>Arduino, ESP8266 POST Metodu ile Veri Gönderme<a class="headerlink" href="#arduino-esp8266-post-metodu-ile-veri-gonderme" title="Permalink to this heading">¶</a></h2>
+<h2>Arduino, ESP8266 POST Metodu ile Veri Gönderme<a class="headerlink" href="#arduino-esp8266-post-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h2>
 <p>Bu örnekde Arduino Uno ya RX ve TX ile bağlanmış olan ESP8266 ile iothook a veri gonderme örneği verilmiştir.
 Örnekde 0-100 arasında rastgele sayı üretilerek iothook da #19 test id numaralı
 cihaz için gönderim gerçekleşmiştir. Cihaz datalarını <a class="reference external" href="https://iothook.com/en/device/data/19/">https://iothook.com/en/device/data/19/</a> linkinden gercek
@@ -447,7 +444,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 </div>
 </section>
 <section id="arduino-esp8266-post-metodu-ile-2-veri-gonderme">
-<h2>Arduino, ESP8266 POST Metodu ile 2 Veri Gönderme<a class="headerlink" href="#arduino-esp8266-post-metodu-ile-2-veri-gonderme" title="Permalink to this heading">¶</a></h2>
+<h2>Arduino, ESP8266 POST Metodu ile 2 Veri Gönderme<a class="headerlink" href="#arduino-esp8266-post-metodu-ile-2-veri-gonderme" title="Permalink to this headline">¶</a></h2>
 <p>Bu örnekde Arduino Uno ya RX ve TX ile bağlanmış olan ESP8266 ile iothook a veri gonderme örneği verilmiştir.
 Örnekde 0-100 arasında rastgele 2 sayı üretilerek iothook da #12 temp id numaralı
 cihaz için gönderim gerçekleşmiştir. Cihaz datalarını <a class="reference external" href="https://iothook.com/en/device/data/12/">https://iothook.com/en/device/data/12/</a> linkinden gercek
@@ -633,7 +630,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 </div>
 </section>
 <section id="arduino-esp8266-nodemcu-get-metodu-ile-veri-gonderme">
-<h2>Arduino, ESP8266, Nodemcu GET Metodu ile Veri Gönderme<a class="headerlink" href="#arduino-esp8266-nodemcu-get-metodu-ile-veri-gonderme" title="Permalink to this heading">¶</a></h2>
+<h2>Arduino, ESP8266, Nodemcu GET Metodu ile Veri Gönderme<a class="headerlink" href="#arduino-esp8266-nodemcu-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h2>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde Arduino, ESP8266 ve NodeMCU ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:</p>
@@ -821,47 +818,47 @@ zamanlı olarak takip edebilirsiniz.</p>
 </div>
 </section>
 <section id="go-get-metodu-ile-veri-gonderme">
-<h2>GO GET Metodu ile Veri Gönderme<a class="headerlink" href="#go-get-metodu-ile-veri-gonderme" title="Permalink to this heading">¶</a></h2>
+<h2>GO GET Metodu ile Veri Gönderme<a class="headerlink" href="#go-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h2>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde GO dili ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:</p>
-<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span><span class="w"></span>
-<span class="c1">// Guncelleme: 19 Agustos 2019</span><span class="w"></span>
-<span class="c1">// Sahin MERSIN</span><span class="w"></span>
-<span class="c1">// iothook.com</span><span class="w"></span>
-<span class="c1">// postman kullanilarak olusturulmustur</span><span class="w"></span>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
+<span class="c1">// Guncelleme: 19 Agustos 2019</span>
+<span class="c1">// Sahin MERSIN</span>
+<span class="c1">// iothook.com</span>
+<span class="c1">// postman kullanilarak olusturulmustur</span>
 
 
-<span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="kn">package</span> <span class="nx">main</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;net/http&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;io/ioutil&quot;</span><span class="w"></span>
-<span class="p">)</span><span class="w"></span>
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;net/http&quot;</span>
+    <span class="s">&quot;io/ioutil&quot;</span>
+<span class="p">)</span>
 
-<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-<span class="w">    </span><span class="nx">url</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="w"></span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span>
 
-<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span><span class="w"></span>
+    <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
-<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no-cache&quot;</span><span class="p">)</span><span class="w"></span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span> <span class="s">&quot;no-cache&quot;</span><span class="p">)</span>
 
-<span class="w">    </span><span class="nx">res</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">DefaultClient</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span><span class="w"></span>
+    <span class="nx">res</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">DefaultClient</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
 
-<span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
-<span class="w">    </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span><span class="w"></span>
+    <span class="k">defer</span> <span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+    <span class="nx">body</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
 
-<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">))</span><span class="w"></span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">))</span>
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="php-get-metodu-ile-veri-gonderme">
-<h2>PHP GET Metodu ile Veri Gönderme<a class="headerlink" href="#php-get-metodu-ile-veri-gonderme" title="Permalink to this heading">¶</a></h2>
+<h2>PHP GET Metodu ile Veri Gönderme<a class="headerlink" href="#php-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h2>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde PHP dili ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:</p>
@@ -900,110 +897,110 @@ zamanlı olarak takip edebilirsiniz.</p>
 </div>
 </section>
 <section id="nodejs-get-metodu-ile-veri-gonderme">
-<h2>NodeJS GET Metodu ile Veri Gönderme<a class="headerlink" href="#nodejs-get-metodu-ile-veri-gonderme" title="Permalink to this heading">¶</a></h2>
+<h2>NodeJS GET Metodu ile Veri Gönderme<a class="headerlink" href="#nodejs-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h2>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span><span class="w"></span>
-<span class="c1">// Guncelleme: 19 Agustos 2019</span><span class="w"></span>
-<span class="c1">// Sahin MERSIN</span><span class="w"></span>
-<span class="c1">// iothook.com</span><span class="w"></span>
-<span class="c1">// postman kullanilarak olusturulmustur</span><span class="w"></span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
+<span class="c1">// Guncelleme: 19 Agustos 2019</span>
+<span class="c1">// Sahin MERSIN</span>
+<span class="c1">// iothook.com</span>
+<span class="c1">// postman kullanilarak olusturulmustur</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">);</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;method&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;hostname&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;iothook.com&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;port&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;path&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;headers&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;cache-control&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no-cache&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;postman-token&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;033da3c8-6196-cd49-f72d-1850a7d18500&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;method&quot;</span><span class="o">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;hostname&quot;</span><span class="o">:</span> <span class="s2">&quot;iothook.com&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;port&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;headers&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;cache-control&quot;</span><span class="o">:</span> <span class="s2">&quot;no-cache&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;postman-token&quot;</span><span class="o">:</span> <span class="s2">&quot;033da3c8-6196-cd49-f72d-1850a7d18500&quot;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">chunks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+<span class="kd">var</span> <span class="nx">req</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">chunks</span> <span class="o">=</span> <span class="p">[];</span>
 
-<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">chunks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunk</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">});</span><span class="w"></span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">chunks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunk</span><span class="p">);</span>
+  <span class="p">});</span>
 
-<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;end&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Buffer</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">chunks</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span><span class="w"></span>
-<span class="w">  </span><span class="p">});</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;end&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">chunks</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+  <span class="p">});</span>
+<span class="p">});</span>
 
-<span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span><span class="w"></span>
+<span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>
 <section id="javascript-jquery-ajax-get-metodu-ile-veri-gonderme">
-<h2>Javascript Jquery Ajax GET Metodu ile Veri Gönderme<a class="headerlink" href="#javascript-jquery-ajax-get-metodu-ile-veri-gonderme" title="Permalink to this heading">¶</a></h2>
+<h2>Javascript Jquery Ajax GET Metodu ile Veri Gönderme<a class="headerlink" href="#javascript-jquery-ajax-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h2>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span><span class="w"></span>
-<span class="c1">// Guncelleme: 19 Agustos 2019</span><span class="w"></span>
-<span class="c1">// Sahin MERSIN</span><span class="w"></span>
-<span class="c1">// iothook.com</span><span class="w"></span>
-<span class="c1">// postman kullanilarak olusturulmustur</span><span class="w"></span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
+<span class="c1">// Guncelleme: 19 Agustos 2019</span>
+<span class="c1">// Sahin MERSIN</span>
+<span class="c1">// iothook.com</span>
+<span class="c1">// postman kullanilarak olusturulmustur</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;async&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;crossDomain&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;method&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;headers&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;cache-control&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no-cache&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;async&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">&quot;crossDomain&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;method&quot;</span><span class="o">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;headers&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;cache-control&quot;</span><span class="o">:</span> <span class="s2">&quot;no-cache&quot;</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 
-<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
 </pre></div>
 </div>
 </section>
 <section id="java-unirest-get-metodu-ile-veri-gonderme">
-<h2>Java Unirest GET Metodu ile Veri Gönderme<a class="headerlink" href="#java-unirest-get-metodu-ile-veri-gonderme" title="Permalink to this heading">¶</a></h2>
+<h2>Java Unirest GET Metodu ile Veri Gönderme<a class="headerlink" href="#java-unirest-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h2>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span><span class="w"></span>
-<span class="c1">// Guncelleme: 19 Agustos 2019</span><span class="w"></span>
-<span class="c1">// Sahin MERSIN</span><span class="w"></span>
-<span class="c1">// iothook.com</span><span class="w"></span>
-<span class="c1">// postman kullanilarak olusturulmustur</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
+<span class="c1">// Guncelleme: 19 Agustos 2019</span>
+<span class="c1">// Sahin MERSIN</span>
+<span class="c1">// iothook.com</span>
+<span class="c1">// postman kullanilarak olusturulmustur</span>
 
-<span class="n">HttpResponse</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Unirest</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no-cache&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">asString</span><span class="p">();</span><span class="w"></span>
+<span class="n">HttpResponse</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">Unirest</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span> <span class="s">&quot;no-cache&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">asString</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>
 <section id="id1">
-<h2>Java Unirest GET Metodu ile Veri Gönderme<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<h2>Java Unirest GET Metodu ile Veri Gönderme<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span><span class="w"></span>
-<span class="c1">// Guncelleme: 19 Agustos 2019</span><span class="w"></span>
-<span class="c1">// Sahin MERSIN</span><span class="w"></span>
-<span class="c1">// iothook.com</span><span class="w"></span>
-<span class="c1">// postman kullanilarak olusturulmustur</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
+<span class="c1">// Guncelleme: 19 Agustos 2019</span>
+<span class="c1">// Sahin MERSIN</span>
+<span class="c1">// iothook.com</span>
+<span class="c1">// postman kullanilarak olusturulmustur</span>
 
-<span class="n">OkHttpClient</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OkHttpClient</span><span class="p">();</span><span class="w"></span>
+<span class="n">OkHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OkHttpClient</span><span class="p">();</span>
 
-<span class="n">Request</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Request</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">url</span><span class="p">(</span><span class="s">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">get</span><span class="p">()</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no-cache&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="na">build</span><span class="p">();</span><span class="w"></span>
+<span class="n">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Request</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+  <span class="p">.</span><span class="na">url</span><span class="p">(</span><span class="s">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">get</span><span class="p">()</span>
+  <span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span> <span class="s">&quot;no-cache&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="na">build</span><span class="p">();</span>
 
-<span class="n">Response</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="na">newCall</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span><span class="w"></span>
+<span class="n">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="na">newCall</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>
@@ -1019,69 +1016,70 @@ zamanlı olarak takip edebilirsiniz.</p>
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/internet-of-things.png" alt="Logo"/>
             </a></p>
-  <div>
-    <h3><a href="index.html">İçindekiler</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Veri Gönder</a><ul>
-<li><a class="reference internal" href="#python-ile-json-veri-gonderme">Python ile JSON Veri Gönderme</a></li>
-<li><a class="reference internal" href="#python-get-metodu-ile-veri-gonderme">Python GET Metodu ile Veri Gönderme</a></li>
-<li><a class="reference internal" href="#arduino-esp8266-post-metodu-ile-veri-gonderme">Arduino, ESP8266 POST Metodu ile Veri Gönderme</a></li>
-<li><a class="reference internal" href="#arduino-esp8266-post-metodu-ile-2-veri-gonderme">Arduino, ESP8266 POST Metodu ile 2 Veri Gönderme</a></li>
-<li><a class="reference internal" href="#arduino-esp8266-nodemcu-get-metodu-ile-veri-gonderme">Arduino, ESP8266, Nodemcu GET Metodu ile Veri Gönderme</a></li>
-<li><a class="reference internal" href="#go-get-metodu-ile-veri-gonderme">GO GET Metodu ile Veri Gönderme</a></li>
-<li><a class="reference internal" href="#php-get-metodu-ile-veri-gonderme">PHP GET Metodu ile Veri Gönderme</a></li>
-<li><a class="reference internal" href="#nodejs-get-metodu-ile-veri-gonderme">NodeJS GET Metodu ile Veri Gönderme</a></li>
-<li><a class="reference internal" href="#javascript-jquery-ajax-get-metodu-ile-veri-gonderme">Javascript Jquery Ajax GET Metodu ile Veri Gönderme</a></li>
-<li><a class="reference internal" href="#java-unirest-get-metodu-ile-veri-gonderme">Java Unirest GET Metodu ile Veri Gönderme</a></li>
-<li><a class="reference internal" href="#id1">Java Unirest GET Metodu ile Veri Gönderme</a></li>
+<h3><a href="index.html">Table of Contents</a></h3>
+<p class="caption" role="heading"><span class="caption-text">Sahinİçindekiler:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="what-is-iot.html">What is IOT?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what-is-iothook.html">IOTHOOK Nedir?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="why-iothook.html">Niçin Iothook?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-new-device.html">Cihaz Ekle</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Veri Gönder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-ile-json-veri-gonderme">Python ile JSON Veri Gönderme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-get-metodu-ile-veri-gonderme">Python GET Metodu ile Veri Gönderme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arduino-esp8266-post-metodu-ile-veri-gonderme">Arduino, ESP8266 POST Metodu ile Veri Gönderme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arduino-esp8266-post-metodu-ile-2-veri-gonderme">Arduino, ESP8266 POST Metodu ile 2 Veri Gönderme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arduino-esp8266-nodemcu-get-metodu-ile-veri-gonderme">Arduino, ESP8266, Nodemcu GET Metodu ile Veri Gönderme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#go-get-metodu-ile-veri-gonderme">GO GET Metodu ile Veri Gönderme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#php-get-metodu-ile-veri-gonderme">PHP GET Metodu ile Veri Gönderme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nodejs-get-metodu-ile-veri-gonderme">NodeJS GET Metodu ile Veri Gönderme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-jquery-ajax-get-metodu-ile-veri-gonderme">Javascript Jquery Ajax GET Metodu ile Veri Gönderme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#java-unirest-get-metodu-ile-veri-gonderme">Java Unirest GET Metodu ile Veri Gönderme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Java Unirest GET Metodu ile Veri Gönderme</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="read-data.html">Veri Al</a></li>
 </ul>
 
-  </div>
-  <div>
-    <h4>Önceki konu</h4>
-    <p class="topless"><a href="create-new-device.html"
-                          title="önceki bölüm">Cihaz Ekle</a></p>
-  </div>
-  <div>
-    <h4>Sonraki konu</h4>
-    <p class="topless"><a href="read-data.html"
-                          title="sonraki bölüm">Veri Al</a></p>
-  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/send-data.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Hızlı Arama</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Git" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Gezinti</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="Genel Dizin"
-             >dizin</a></li>
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
           <a href="read-data.html" title="Veri Al"
-             >sonraki</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="create-new-device.html" title="Cihaz Ekle"
-             >önceki</a> |</li>
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">IoT Internet Of Things Project</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Veri Gönder</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Telif hakkı 2022, electrocoder.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+        &#169; Copyright 2022, electrocoder.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
     </div>
   </body>
 </html>

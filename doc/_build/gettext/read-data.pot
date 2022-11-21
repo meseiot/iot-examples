@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: iot-examples 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-19 23:50+0300\n"
+"POT-Creation-Date: 2022-11-21 13:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Script çalıştırıldığında aşağıdaki gibi bir pencere görmemiz gerekiyor."
 msgstr ""
 
-#: ../../read-data.rst:-1
+#: ../../read-data.rst:None
 msgid "pyside2-matplotlib-iothook.png"
 msgstr ""
 

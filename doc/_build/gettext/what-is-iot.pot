@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: iot-examples 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-19 23:50+0300\n"
+"POT-Creation-Date: 2022-11-21 13:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,6 +24,6 @@ msgstr ""
 msgid "SahinNesnelerin interneti \"internet of things\" 1999 yılında Kevin Ashton tarafından kullanılan bir kavramdır ve teknolojideki gelişmeler ile birlikte bugünkü haline gelmiştir. RFID teknolojisi için üretilen bu kavram günümüzde tüm elektronik cihazlara uygulanmaktadır."
 msgstr ""
 
-#: ../../what-is-iot.rst:-1
+#: ../../what-is-iot.rst:None
 msgid "internet-of-things.png"
 msgstr ""

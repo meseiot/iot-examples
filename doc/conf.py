@@ -66,7 +66,7 @@ release = '1'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'en'
+language = 'en,tr'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -163,4 +163,11 @@ html_logo = '_static/internet-of-things.png'
 
 html_favicon = '_static/internet-of-things.png'
 
-html_show_sourcelink = False
+html_show_sourcelink = True
+
+html_sidebars = {
+   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
+   'using/windows': ['windowssidebar.html', 'searchbox.html'],
+}
+
+html_search_language = 'en,tr'

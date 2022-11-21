@@ -1,6 +1,6 @@
 # IOT Examples
 
-IoT Cihazı ile Post, Get, Publish, Subscribe Methods
+IoT Device ile Post, Get, Publish, Subscribe Methods
 ====================================================
 
 IoT HTTP Method

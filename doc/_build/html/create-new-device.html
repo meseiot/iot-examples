@@ -2,7 +2,7 @@
 
 <!doctype html>
 
-<html lang="en,tr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -50,23 +50,33 @@
             
   <section id="add-new-device">
 <h1>Add New Device<a class="headerlink" href="#add-new-device" title="Permalink to this headline">¶</a></h1>
-<p>Iothook; internete bağlı nesneler arasında veri iletimini sağlamak için oluşturulmuş
-web servisidir. Cihaz ile diğer iot sistemleri veri paylaşımı yapabilir, birbirlerini tetikleyerek çalıştırabilir.</p>
-<p>Iothook web servislerini kullanabilmek için üye olunmalıdır.</p>
-<p>Üyelik adımından sonra yönetim paneli aracılığı ile ‘Cihaz Ekle’ ekranına girilir.</p>
-<section id="cihaz-ekle">
-<h2>Cihaz Ekle<a class="headerlink" href="#cihaz-ekle" title="Permalink to this headline">¶</a></h2>
-<p>Cihaz ekleme adımları şu şekildedir:</p>
+<p>IoThook; created to enable data transmission between internet-connected objects is a web service. The device and
+other iot systems can share data and operate by triggering each other.</p>
+<p>You must be a member to use IoThook web services.</p>
+<p>After the membership step, the ‘Add Device’ screen is entered via the administration panel. Add Device screens are
+divided into HTTP and MQTT. Continue by choosing the appropriate one according to the working protocol of your IoT
+device.</p>
+<section id="add-http-device">
+<h2>Add HTTP Device<a class="headerlink" href="#add-http-device" title="Permalink to this headline">¶</a></h2>
+<p>HTTP The steps to add devices are as follows:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>İsim: Cihaza bir isim verilir. Hatırlamak için Ev Misafir Odası Sıcaklık gibi isimlendirilebilir.</p></li>
-<li><p>Etiket(ler): Cihaz için tanımlama etiketleri kullanılır.</p></li>
-<li><p>Web Site Adresi: Bir proje için kullanılacak ise adres yazılır.</p></li>
-<li><p>Git Web Site Adresi: Kaynak kodlar veriliyor ise adres yazılır.</p></li>
-<li><p>Lokasyon Göster: Harita üzerinde gelen verilerin kaynağı gösterilir.</p></li>
-<li><p>Video Adresi: Tanıtım videosu var ise adres yazılır.</p></li>
-<li><p>Açıklama: Projeye ait detaylı açıklama yazılabilir.</p></li>
-<li><p>Aktif: Cihazın Aktif/Pasif yapılması buradan sağlanır.</p></li>
+<li><p>Log in to your DEMO account with the free login button, if you already have an account, log in.</p></li>
+<li><p>Add HTTP Device button is click.</p></li>
+<li><p>Name: Enter device name. To remember, the Home Guest Room can be named like Temperature.</p></li>
+<li><p>1.Field Type: Select Field Type (First field is required)</p></li>
+<li><p>1.Field Name: Enter a field name (First field is required)</p></li>
+<li><p>2-8.Field Type: Select Field Type (Optional)</p></li>
+<li><p>2-8.Field Name: Enter a field name (Optional)</p></li>
+<li><p>Label(s): Label(s) write please (Optional)</p></li>
+<li><p>Website address: Please Website address.</p></li>
+<li><p>Git Website address: Git Website address, for source code.</p></li>
+<li><p>Show Location: The incoming data source is shown on the map.</p></li>
+<li><p>Video address: Video URL address, If there is a promotional video, the address is written.</p></li>
+<li><p>Description: Detailed description of the project can be written.</p></li>
+<li><p>Enable: Active/Passive setting of the device is provided here.</p></li>
+<li><p>Response: Response detail Enable/Disable (Return record ID is response False, else return all field value and timestamp)</p></li>
+<li><p>Is Public: Share Device and data.</p></li>
 </ul>
 </div></blockquote>
 </section>
@@ -100,7 +110,7 @@ için eklenir. En az 1 alan eklenmelidir. Sensörler Nem, Isı, Oksijen, Rüzgar
 <li class="toctree-l1"><a class="reference internal" href="what-is-iothook.html">What is IOTHOOK?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="why-iothook.html">Why IoThook?</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Add New Device</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cihaz-ekle">Cihaz Ekle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-http-device">Add HTTP Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sensor-ekle">Sensör Ekle</a></li>
 </ul>
 </li>

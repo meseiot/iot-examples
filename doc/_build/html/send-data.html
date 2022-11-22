@@ -52,62 +52,65 @@
 <h1>Send Data<a class="headerlink" href="#send-data" title="Permalink to this headline">¶</a></h1>
 <section id="http-send-data">
 <h2>HTTP Send Data<a class="headerlink" href="#http-send-data" title="Permalink to this headline">¶</a></h2>
-<p>Veri göndermek için öncelikle cihaz eklemeniz gerekir. Cihaz oluşturulduğunda
-size özel okuma ve yazma “API KEY” üretilerek belirlenen erişim metoduna göre (POST, GET, POST/GET) veri işlemi gerçekleştirilir.</p>
-<p>Örneğin; Cihazımız ısı, ışık, hareket, bar ve nem değerlerini alan bir yapıda olsun.
-Cihaz içerisinde bulunacak sensörlerimiz bizlere bu dataları 15 saniyede bir ve toplamda 100 kere göndersin.</p>
-<p>Oluşturulan Okuma ve Yazma API Key Yöneticisi sayfasından görülebilir.</p>
-<section id="python-ile-json-veri-gonderme">
-<h3>Python ile JSON Veri Gönderme<a class="headerlink" href="#python-ile-json-veri-gonderme" title="Permalink to this headline">¶</a></h3>
-<p>Python ile IOT sunucularına veri göndermek için kullanacağımız API ENDPOINT adresi <em>https://iothook.com/api/update/</em> dir.
-Veri göndermek için yazma <em>api_key</em> bilgisine ihtiyaç vardır. Bu KEY e cihaz <strong>detail</strong> sayfasından ulaşabilirsiniz.</p>
-<p>Veri göndermek için olmazsa olmaz 2 alan vardır. Bunlar <strong>api_key ve field_1</strong> alanlarıdır. APIKEY cihaz sahipliğinizi
-onaylar ve en az bir veri alanı olması gerektiğinden <em>field_1</em> kesinlikle olmalıdır. Diğer alanlar tanımlanmış
-bile olsalar gönderilmedikleri zaman <strong>None</strong> olarak işaretlenir.</p>
-<p>Veri başarılı bir şekilde gönderildiğinde veriye dair Json REST çıktı gelmelidir. Bunu <em>response.json()</em> metodu ile
-gerçekleştiriyoruz. Örnek çıktı:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">{</span><span class="s1">&#39;device&#39;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s1">&#39;field_1&#39;</span><span class="p">:</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;field_2&#39;</span><span class="p">:</span> <span class="s1">&#39;3.49&#39;</span><span class="p">,</span> <span class="s1">&#39;field_3&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;field_4&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;field_5&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;field_6&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;field_7&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;field_8&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">502491</span><span class="p">,</span> <span class="s1">&#39;pub_date&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-08-31T01:07:29.438160&#39;</span><span class="p">,</span> <span class="s1">&#39;remote_address&#39;</span><span class="p">:</span> <span class="s1">&#39;88.242.135.167&amp;python-requests/2.18.4&amp;HTTP/1.1&#39;</span><span class="p">}</span>
+<p>To send data, you must first add a device. Special read and write “API KEY” when the device is created
+Data processing is performed according to the access method (POST, GET, POST/GET) that is generated and determined.</p>
+<p>For example; Let our device be in a structure that receives humidity, heat and light values.
+For this example, the device named “# 650 - iot_examples” was created on iothook.com.
+<a class="reference external" href="https://iothook.com/en/device/settings/650/">IoThook</a> .</p>
+<p>Let the IoT device read the data from the sensors and send this data to us once every 15 seconds, a total of 100 times.</p>
+<p>You can access the read and write API Keys created for the #650 iot device from the IoThook dashboard.</p>
+<p>The API ENDPOINT address we will use to send data to IoThook servers with Python is <em>https://iothook.com/api/update/</em>.
+Writing <em>api_key</em> information is needed to send data. You can access this KEY from the device <strong>settings</strong> page.</p>
+<p>There are 2 required fields to send data. These fields are <strong>api_key</strong> and <strong>field_1</strong> fields. APIKEY your device ownership
+<em>field_1</em> absolutely must be because it validates and must have at least one data field. Other fields defined
+even if they are not sent, they are recorded as <strong>None</strong>.</p>
+<section id="send-json-data-in-post-with-python">
+<h3>Send JSON Data in POST with Python<a class="headerlink" href="#send-json-data-in-post-with-python" title="Permalink to this headline">¶</a></h3>
+<p>In this example, JSON data is sent to the device channel named “# 650 - iot_examples” using the HTTP POST method with
+Python. When the data is sent successfully, Json REST output of the data is received. You can do this with the
+<em>response.json()</em> method, we are doing.</p>
+<p>Example output:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">{</span><span class="s1">&#39;device&#39;</span><span class="p">:</span> <span class="mi">650</span><span class="p">,</span> <span class="s1">&#39;field_1&#39;</span><span class="p">:</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;field_2&#39;</span><span class="p">:</span> <span class="s1">&#39;3.49&#39;</span><span class="p">,</span> <span class="s1">&#39;field_3&#39;</span><span class="p">:</span> <span class="s1">&#39;22&#39;</span><span class="p">,</span> <span class="s1">&#39;field_4&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;field_5&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;field_6&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;field_7&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;field_8&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">502491</span><span class="p">,</span> <span class="s1">&#39;pub_date&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-08-31T01:07:29.438160&#39;</span><span class="p">,</span> <span class="s1">&#39;remote_address&#39;</span><span class="p">:</span> <span class="s1">&#39;88.242.135.167&amp;python-requests/2.18.4&amp;HTTP/1.1&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
-<p>Python ile Json Post Örneği:</p>
+<p>You can find this example and others at <a class="reference external" href="https://github.com/meseiot/iot-examples/blob/master/http/python/iot_post_json_update_post.py">IoT Examples Github</a>.</p>
+<p>Send JSON Data in POST with Python Examples:</p>
 <figure class="align-center">
 <img alt="python-send-data.png" src="_images/python-send-data.png" />
 </figure>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Python ile IoThook REST Api Testi</span>
 
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">  Python ile IOThook REST Api Testi</span>
+<span class="sd">IoThook&#39;da her cihazin bir kimlik numarasi APIKEY&#39;i vardir.</span>
+<span class="sd">Bu APIKEY kullanilarak veriler IoThook&#39;a POST metodu ile gonderilir.</span>
+<span class="sd">5 kere 15 saniyede bir random verileri iothook&#39;a gonderir.</span>
 
-<span class="sd">  Kod çalıştırıldığında APIKEY ile doğrulama gerçekleştirilir.</span>
-<span class="sd">  Cihaz api_key ile ilgili veriler IOThook a post edilir.</span>
+<span class="sd">Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde</span>
+<span class="sd">testlerin yapilmasini amaclamaktadir.</span>
 
-<span class="sd">  Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde</span>
-<span class="sd">  testlerin yapilmasini amaclamaktadir.</span>
+<span class="sd">v1 : 11 Eylul 2017</span>
+<span class="sd">v2 : 19 Agustos 2019</span>
+<span class="sd">v3 : 31 Ekim 2022</span>
 
-<span class="sd">  20 Eylul 2017</span>
-<span class="sd">  Güncelleme : 19 Agustos 2019</span>
-<span class="sd">  Sahin MERSIN</span>
+<span class="sd">Sahin MERSIN - electrocoder</span>
 
-<span class="sd">  Daha fazlasi icin</span>
+<span class="sd">Daha fazlasi icin</span>
 
-<span class="sd">  http://www.iothook.com</span>
-<span class="sd">  ve</span>
-<span class="sd">  https://github.com/electrocoder/IOThook</span>
+<span class="sd">http://www.iothook.com</span>
+<span class="sd">https://www.mesebilisim.com</span>
+<span class="sd">https://mesemekatronik.com</span>
+<span class="sd">https://electrocoder.blogspot.com</span>
+<span class="sd">https://github.com/meseiot/iotexamples</span>
 
-<span class="sd">  sitelerine gidiniz.</span>
+<span class="sd">sitelerine gidiniz.</span>
 
-<span class="sd">  Sorular ve destek talepleri icin</span>
-<span class="sd">  https://github.com/electrocoder/IOThook/issues</span>
-<span class="sd">  sayfasindan veya Meşe Bilişim den yardım alabilirsiniz.</span>
+<span class="sd">Yayin : http://mesebilisim.com</span>
 
-<span class="sd">  Yayin : http://mesebilisim.com</span>
+<span class="sd">Licensed under the Apache License, Version 2.0 (the &quot;License&quot;).</span>
+<span class="sd">You may not use this file except in compliance with the License.</span>
+<span class="sd">A copy of the License is located at</span>
 
-<span class="sd">  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;).</span>
-<span class="sd">  You may not use this file except in compliance with the License.</span>
-<span class="sd">  A copy of the License is located at</span>
-
-<span class="sd">  http://www.apache.org/licenses/</span>
+<span class="sd">http://www.apache.org/licenses/</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">json</span>
@@ -119,20 +122,24 @@ gerçekleştiriyoruz. Örnek çıktı:</p>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Content-type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">}</span>
 
+<span class="c1"># demo account API_KEY</span>
+<span class="c1"># https://iothook.com/en/device/data/650/</span>
+<span class="c1"># 650 - iot_examples</span>
+<span class="n">API_KEY</span> <span class="o">=</span> <span class="s1">&#39;21579c1e874fda7276d94f3c&#39;</span>  <span class="c1"># write api key</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://iothook.com/api/update/&#39;</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>  <span class="c1"># write api key</span>
-        <span class="s1">&#39;api_key&#39;</span><span class="p">:</span> <span class="s1">&#39;78b0ca6a4a7da7e20f689818&#39;</span><span class="p">,</span>  <span class="c1"># demo hesap #17 random test</span>
-        <span class="s1">&#39;field_1&#39;</span><span class="p">:</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
-        <span class="s1">&#39;field_2&#39;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
-    <span class="p">}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>  <span class="c1"># write api key</span>
+    <span class="s1">&#39;api_key&#39;</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>  <span class="c1"># demo hesap #650 - iot_examples</span>
+    <span class="s1">&#39;field_1&#39;</span><span class="p">:</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="s1">&#39;field_2&#39;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+<span class="p">}</span>
 
-    <span class="n">data_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">data_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data_json</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-    <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data_json</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Python ile Json Post Örneği 2:</p>
@@ -204,7 +211,7 @@ gerçekleştiriyoruz. Örnek çıktı:</p>
 <section id="python-get-metodu-ile-veri-gonderme">
 <h3>Python GET Metodu ile Veri Gönderme<a class="headerlink" href="#python-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id2"><span class="problematic" id="id3">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Python ile Get Metodu Kullanarak Veri Gönderme Örneği:</p>
 <figure class="align-center">
 <img alt="python-send-data.png" src="_images/python-iothook.png" />
@@ -267,7 +274,7 @@ gerçekleştiriyoruz. Örnek çıktı:</p>
 Örnekde 0-100 arasında rastgele sayı üretilerek iothook da #19 test id numaralı
 cihaz için gönderim gerçekleşmiştir. Cihaz datalarını <a class="reference external" href="https://iothook.com/en/device/data/19/">https://iothook.com/en/device/data/19/</a> linkinden gercek
 zamanlı olarak takip edebilirsiniz.</p>
-<p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id4"><span class="problematic" id="id5">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">  Arduino ile ESP8266 Wifi Modul Testi</span>
 
@@ -451,7 +458,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 Örnekde 0-100 arasında rastgele 2 sayı üretilerek iothook da #12 temp id numaralı
 cihaz için gönderim gerçekleşmiştir. Cihaz datalarını <a class="reference external" href="https://iothook.com/en/device/data/12/">https://iothook.com/en/device/data/12/</a> linkinden gercek
 zamanlı olarak takip edebilirsiniz.</p>
-<p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id6"><span class="problematic" id="id7">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">  Arduino ile ESP8266 Wifi Modul Testi</span>
 
@@ -634,7 +641,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="arduino-esp8266-nodemcu-get-metodu-ile-veri-gonderme">
 <h3>Arduino, ESP8266, Nodemcu GET Metodu ile Veri Gönderme<a class="headerlink" href="#arduino-esp8266-nodemcu-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id8"><span class="problematic" id="id9">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde Arduino, ESP8266 ve NodeMCU ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// 18.09.2017</span>
 <span class="c1">// Guncelleme : 19.08.2019</span>
@@ -822,7 +829,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="go-get-metodu-ile-veri-gonderme">
 <h3>GO GET Metodu ile Veri Gönderme<a class="headerlink" href="#go-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id10"><span class="problematic" id="id11">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde GO dili ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span>
@@ -862,7 +869,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="php-get-metodu-ile-veri-gonderme">
 <h3>PHP GET Metodu ile Veri Gönderme<a class="headerlink" href="#php-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id12"><span class="problematic" id="id13">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde PHP dili ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// 04 Eylul 2017</span>
 <span class="x">// Guncelleme: 19 Agustos 2019</span>
@@ -901,7 +908,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="nodejs-get-metodu-ile-veri-gonderme">
 <h3>NodeJS GET Metodu ile Veri Gönderme<a class="headerlink" href="#nodejs-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id14"><span class="problematic" id="id15">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span>
@@ -942,7 +949,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="javascript-jquery-ajax-get-metodu-ile-veri-gonderme">
 <h3>Javascript Jquery Ajax GET Metodu ile Veri Gönderme<a class="headerlink" href="#javascript-jquery-ajax-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id16"><span class="problematic" id="id17">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span>
@@ -969,7 +976,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="java-unirest-get-metodu-ile-veri-gonderme">
 <h3>Java Unirest GET Metodu ile Veri Gönderme<a class="headerlink" href="#java-unirest-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id18"><span class="problematic" id="id19">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span>
@@ -986,7 +993,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="id1">
 <h3>Java Unirest GET Metodu ile Veri Gönderme<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id20"><span class="problematic" id="id21">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span>
@@ -1028,7 +1035,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <li class="toctree-l1"><a class="reference internal" href="create-new-device.html">Add New Device</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Send Data</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#http-send-data">HTTP Send Data</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#python-ile-json-veri-gonderme">Python ile JSON Veri Gönderme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#send-json-data-in-post-with-python">Send JSON Data in POST with Python</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#python-get-metodu-ile-veri-gonderme">Python GET Metodu ile Veri Gönderme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#arduino-esp8266-post-metodu-ile-veri-gonderme">Arduino, ESP8266 POST Metodu ile Veri Gönderme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#arduino-esp8266-post-metodu-ile-2-veri-gonderme">Arduino, ESP8266 POST Metodu ile 2 Veri Gönderme</a></li>

@@ -1,17 +1,23 @@
-***********
-Veri Gönder
-***********
+*********
+Send Data
+*********
 
-Veri göndermek için öncelikle cihaz eklemeniz gerekir. Cihaz oluşturulduğunda
-size özel okuma ve yazma "API KEY" üretilerek belirlenen erişim metoduna göre (POST, GET, POST/GET) veri işlemi gerçekleştirilir.
+HTTP Send Data
+**************
 
-Örneğin; Cihazımız ısı, ışık, hareket, bar ve nem değerlerini alan bir yapıda olsun.
-Cihaz içerisinde bulunacak sensörlerimiz bizlere bu dataları 15 saniyede bir ve toplamda 100 kere göndersin.
+To send data, you must first add a device. Special read and write "API KEY" when the device is created
+Data processing is performed according to the access method (POST, GET, POST/GET) that is generated and determined.
 
-Oluşturulan Okuma ve Yazma API Key Yöneticisi sayfasından görülebilir.
+For example; Let our device be in a structure that receives humidity, heat and light values.
+For this example, the device named "# 650 - iot_examples" was created on iothook.com.
+`IoThook <https://iothook.com/en/device/settings/650/>`_ .
+
+Let the IoT device read the data from the sensors and send this data to us once every 15 seconds, a total of 100 times.
+
+You can access the read and write API Keys created for the #650 iot device from the IoThook dashboard.
 
 Python ile JSON Veri Gönderme
------------------------------
+=============================
 
 Python ile IOT sunucularına veri göndermek için kullanacağımız API ENDPOINT adresi *https://iothook.com/api/update/* dir.
 Veri göndermek için yazma *api_key* bilgisine ihtiyaç vardır. Bu KEY e cihaz **detail** sayfasından ulaşabilirsiniz.
@@ -168,7 +174,7 @@ Python ile Json Post Örneği 2:
 
 
 Python GET Metodu ile Veri Gönderme
------------------------------------
+===================================
 
 IOThook Api güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
 
@@ -234,7 +240,7 @@ Python ile Get Metodu Kullanarak Veri Gönderme Örneği:
 
 
 Arduino, ESP8266 POST Metodu ile Veri Gönderme
-----------------------------------------------
+==============================================
 
 Bu örnekde Arduino Uno ya RX ve TX ile bağlanmış olan ESP8266 ile iothook a veri gonderme örneği verilmiştir.
 Örnekde 0-100 arasında rastgele sayı üretilerek iothook da #19 test id numaralı
@@ -422,7 +428,7 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
 
 
 Arduino, ESP8266 POST Metodu ile 2 Veri Gönderme
-------------------------------------------------
+================================================
 
 Bu örnekde Arduino Uno ya RX ve TX ile bağlanmış olan ESP8266 ile iothook a veri gonderme örneği verilmiştir.
 Örnekde 0-100 arasında rastgele 2 sayı üretilerek iothook da #12 temp id numaralı
@@ -612,7 +618,7 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
 
 
 Arduino, ESP8266, Nodemcu GET Metodu ile Veri Gönderme
-------------------------------------------------------
+======================================================
 
 IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
 
@@ -805,7 +811,7 @@ Bu örnekde Arduino, ESP8266 ve NodeMCU ile ile Get metodu kullanarak veri gönd
 
 
 GO GET Metodu ile Veri Gönderme
--------------------------------
+===============================
 
 IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
 
@@ -850,7 +856,7 @@ Bu örnekde GO dili ile ile Get metodu kullanarak veri gönderme örneği verilm
 
 
 PHP GET Metodu ile Veri Gönderme
---------------------------------
+================================
 
 IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
 
@@ -894,7 +900,7 @@ Bu örnekde PHP dili ile ile Get metodu kullanarak veri gönderme örneği veril
 
 
 NodeJS GET Metodu ile Veri Gönderme
------------------------------------
+===================================
 
 IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
 
@@ -940,7 +946,7 @@ Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir
 
 
 Javascript Jquery Ajax GET Metodu ile Veri Gönderme
----------------------------------------------------
+===================================================
 
 IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
 
@@ -972,7 +978,7 @@ Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir
 
 
 Java Unirest GET Metodu ile Veri Gönderme
------------------------------------------
+=========================================
 
 IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
 
@@ -994,7 +1000,7 @@ Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir
 
 
 Java Unirest GET Metodu ile Veri Gönderme
------------------------------------------
+=========================================
 
 IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
 

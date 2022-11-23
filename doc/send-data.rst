@@ -392,15 +392,14 @@ You can find this example and others at `IoT Examples Github <https://raw.github
         pprint.pprint(response.json())
         time.sleep(15)
 
-Arduino, ESP8266 POST Metodu ile Veri Gönderme
-==============================================
+Arduino and ESP8266 HTTP POST Send Data
+=======================================
 
-Bu örnekde Arduino Uno ya RX ve TX ile bağlanmış olan ESP8266 ile iothook a veri gonderme örneği verilmiştir.
-Örnekde 0-100 arasında rastgele sayı üretilerek iothook da #19 test id numaralı
-cihaz için gönderim gerçekleşmiştir. Cihaz datalarını https://iothook.com/en/device/data/19/ linkinden gercek
-zamanlı olarak takip edebilirsiniz.
+In this example, Arduino code is given for sending data to iothook with ESP8266 connected to Arduino Uno with RX and TX.
+In the example, random numbers between 0-100 were generated and the device was sent to the device with
+"# 650 - iot_examples" on iothook.
 
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
+You can find this example and others at `IoT Examples Github <https://raw.githubusercontent.com/meseiot/iot-examples/master/http/python/iot_get_write_1.py>`_.
 
 .. code-block:: c
 

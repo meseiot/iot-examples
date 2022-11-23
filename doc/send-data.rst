@@ -392,14 +392,17 @@ You can find this example and others at `IoT Examples Github <https://raw.github
         pprint.pprint(response.json())
         time.sleep(15)
 
+Arduino and ESP8266
+===================
+
 Arduino and ESP8266 HTTP POST Send Data
-=======================================
+---------------------------------------
 
 In this example, Arduino code is given for sending data to iothook with ESP8266 connected to Arduino Uno with RX and TX.
 In the example, random numbers between 0-100 were generated and the device was sent to the device with
 "# 650 - iot_examples" on iothook.
 
-You can find this example and others at `IoT Examples Github <https://raw.githubusercontent.com/meseiot/iot-examples/master/http/python/iot_get_write_1.py>`_.
+You can find this example and others at `IoT Examples Github <https://github.com/meseiot/iot-examples/blob/master/http/arduino/esp8266/arduino_esp8266_post_send_data.ino>`_.
 
 .. code-block:: c
 
@@ -578,16 +581,15 @@ You can find this example and others at `IoT Examples Github <https://raw.github
         Serial.println("Gonderim hatasi! ESP hazir degil!");
     }
 
+Arduino and ESP8266 HTTP POST Send Data 2
+-----------------------------------------
 
-Arduino, ESP8266 POST Metodu ile 2 Veri Gönderme
-================================================
+In this example, Arduino code is given for sending data to iothook with ESP8266 connected to Arduino Uno with RX and TX.
+In the example, random numbers between 0-100 were generated and the device was sent to the device with
+"# 650 - iot_examples" on iothook.
 
-Bu örnekde Arduino Uno ya RX ve TX ile bağlanmış olan ESP8266 ile iothook a veri gonderme örneği verilmiştir.
-Örnekde 0-100 arasında rastgele 2 sayı üretilerek iothook da #12 temp id numaralı
-cihaz için gönderim gerçekleşmiştir. Cihaz datalarını https://iothook.com/en/device/data/12/ linkinden gercek
-zamanlı olarak takip edebilirsiniz.
+You can find this example and others at `IoT Examples Github <https://github.com/meseiot/iot-examples/blob/master/http/arduino/esp8266/arduino_esp8266_post_send_data.ino>`_.
 
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
 
 .. code-block:: c
 

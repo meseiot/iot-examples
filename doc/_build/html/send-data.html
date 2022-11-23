@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="_static/internet-of-things.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Veri Al" href="read-data.html" />
+    <link rel="next" title="Read Data" href="read-data.html" />
     <link rel="prev" title="Add New Device" href="create-new-device.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--[if lt IE 9]>
@@ -33,7 +33,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="read-data.html" title="Veri Al"
+          <a href="read-data.html" title="Read Data"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="create-new-device.html" title="Add New Device"
@@ -410,13 +410,14 @@ they are not sent, they are recorded as None.</p>
 </div>
 </section>
 </section>
-<section id="arduino-esp8266-post-metodu-ile-veri-gonderme">
-<h3>Arduino, ESP8266 POST Metodu ile Veri Gönderme<a class="headerlink" href="#arduino-esp8266-post-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
-<p>Bu örnekde Arduino Uno ya RX ve TX ile bağlanmış olan ESP8266 ile iothook a veri gonderme örneği verilmiştir.
-Örnekde 0-100 arasında rastgele sayı üretilerek iothook da #19 test id numaralı
-cihaz için gönderim gerçekleşmiştir. Cihaz datalarını <a class="reference external" href="https://iothook.com/en/device/data/19/">https://iothook.com/en/device/data/19/</a> linkinden gercek
-zamanlı olarak takip edebilirsiniz.</p>
-<p>Bu örneğe ve diğerlerine <a href="#id7"><span class="problematic" id="id8">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
+<section id="arduino-and-esp8266">
+<h3>Arduino and ESP8266<a class="headerlink" href="#arduino-and-esp8266" title="Permalink to this headline">¶</a></h3>
+<section id="arduino-and-esp8266-http-post-send-data">
+<h4>Arduino and ESP8266 HTTP POST Send Data<a class="headerlink" href="#arduino-and-esp8266-http-post-send-data" title="Permalink to this headline">¶</a></h4>
+<p>In this example, Arduino code is given for sending data to iothook with ESP8266 connected to Arduino Uno with RX and TX.
+In the example, random numbers between 0-100 were generated and the device was sent to the device with
+“# 650 - iot_examples” on iothook.</p>
+<p>You can find this example and others at <a class="reference external" href="https://github.com/meseiot/iot-examples/blob/master/http/arduino/esp8266/arduino_esp8266_post_send_data.ino">IoT Examples Github</a>.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">  Arduino ile ESP8266 Wifi Modul Testi</span>
 
@@ -594,13 +595,12 @@ zamanlı olarak takip edebilirsiniz.</p>
 </pre></div>
 </div>
 </section>
-<section id="arduino-esp8266-post-metodu-ile-2-veri-gonderme">
-<h3>Arduino, ESP8266 POST Metodu ile 2 Veri Gönderme<a class="headerlink" href="#arduino-esp8266-post-metodu-ile-2-veri-gonderme" title="Permalink to this headline">¶</a></h3>
-<p>Bu örnekde Arduino Uno ya RX ve TX ile bağlanmış olan ESP8266 ile iothook a veri gonderme örneği verilmiştir.
-Örnekde 0-100 arasında rastgele 2 sayı üretilerek iothook da #12 temp id numaralı
-cihaz için gönderim gerçekleşmiştir. Cihaz datalarını <a class="reference external" href="https://iothook.com/en/device/data/12/">https://iothook.com/en/device/data/12/</a> linkinden gercek
-zamanlı olarak takip edebilirsiniz.</p>
-<p>Bu örneğe ve diğerlerine <a href="#id9"><span class="problematic" id="id10">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
+<section id="arduino-and-esp8266-http-post-send-data-2">
+<h4>Arduino and ESP8266 HTTP POST Send Data 2<a class="headerlink" href="#arduino-and-esp8266-http-post-send-data-2" title="Permalink to this headline">¶</a></h4>
+<p>In this example, Arduino code is given for sending data to iothook with ESP8266 connected to Arduino Uno with RX and TX.
+In the example, random numbers between 0-100 were generated and the device was sent to the device with
+“# 650 - iot_examples” on iothook.</p>
+<p>You can find this example and others at <a class="reference external" href="https://github.com/meseiot/iot-examples/blob/master/http/arduino/esp8266/arduino_esp8266_post_send_data.ino">IoT Examples Github</a>.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">  Arduino ile ESP8266 Wifi Modul Testi</span>
 
@@ -780,10 +780,11 @@ zamanlı olarak takip edebilirsiniz.</p>
 </pre></div>
 </div>
 </section>
+</section>
 <section id="arduino-esp8266-nodemcu-get-metodu-ile-veri-gonderme">
 <h3>Arduino, ESP8266, Nodemcu GET Metodu ile Veri Gönderme<a class="headerlink" href="#arduino-esp8266-nodemcu-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a href="#id11"><span class="problematic" id="id12">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id9"><span class="problematic" id="id10">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde Arduino, ESP8266 ve NodeMCU ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// 18.09.2017</span>
 <span class="c1">// Guncelleme : 19.08.2019</span>
@@ -971,7 +972,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="go-get-metodu-ile-veri-gonderme">
 <h3>GO GET Metodu ile Veri Gönderme<a class="headerlink" href="#go-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a href="#id13"><span class="problematic" id="id14">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id11"><span class="problematic" id="id12">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde GO dili ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span><span class="w"></span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span><span class="w"></span>
@@ -1011,7 +1012,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="php-get-metodu-ile-veri-gonderme">
 <h3>PHP GET Metodu ile Veri Gönderme<a class="headerlink" href="#php-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a href="#id15"><span class="problematic" id="id16">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id13"><span class="problematic" id="id14">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde PHP dili ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// 04 Eylul 2017</span>
 <span class="x">// Guncelleme: 19 Agustos 2019</span>
@@ -1050,7 +1051,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="nodejs-get-metodu-ile-veri-gonderme">
 <h3>NodeJS GET Metodu ile Veri Gönderme<a class="headerlink" href="#nodejs-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a href="#id17"><span class="problematic" id="id18">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id15"><span class="problematic" id="id16">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span><span class="w"></span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span><span class="w"></span>
@@ -1091,7 +1092,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="javascript-jquery-ajax-get-metodu-ile-veri-gonderme">
 <h3>Javascript Jquery Ajax GET Metodu ile Veri Gönderme<a class="headerlink" href="#javascript-jquery-ajax-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a href="#id19"><span class="problematic" id="id20">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id17"><span class="problematic" id="id18">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span><span class="w"></span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span><span class="w"></span>
@@ -1118,7 +1119,7 @@ zamanlı olarak takip edebilirsiniz.</p>
 <section id="java-unirest-get-metodu-ile-veri-gonderme">
 <h3>Java Unirest GET Metodu ile Veri Gönderme<a class="headerlink" href="#java-unirest-get-metodu-ile-veri-gonderme" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a href="#id21"><span class="problematic" id="id22">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id19"><span class="problematic" id="id20">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span><span class="w"></span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span><span class="w"></span>
@@ -1132,10 +1133,10 @@ zamanlı olarak takip edebilirsiniz.</p>
 </pre></div>
 </div>
 </section>
-<section id="id6">
-<h3>Java Unirest GET Metodu ile Veri Gönderme<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<section id="id8">
+<h3>Java Unirest GET Metodu ile Veri Gönderme<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <p>IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.</p>
-<p>Bu örneğe ve diğerlerine <a href="#id23"><span class="problematic" id="id24">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
+<p>Bu örneğe ve diğerlerine <a href="#id21"><span class="problematic" id="id22">`IOTHOOK Git`_</span></a> sayfasından ulaşabilirsiniz.</p>
 <p>Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span><span class="w"></span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span><span class="w"></span>
@@ -1188,20 +1189,23 @@ zamanlı olarak takip edebilirsiniz.</p>
 <li class="toctree-l4"><a class="reference internal" href="#send-data-in-get-with-python-examples-2">Send Data in GET with Python Examples 2:</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#arduino-esp8266-post-metodu-ile-veri-gonderme">Arduino, ESP8266 POST Metodu ile Veri Gönderme</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#arduino-esp8266-post-metodu-ile-2-veri-gonderme">Arduino, ESP8266 POST Metodu ile 2 Veri Gönderme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arduino-and-esp8266">Arduino and ESP8266</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#arduino-and-esp8266-http-post-send-data">Arduino and ESP8266 HTTP POST Send Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arduino-and-esp8266-http-post-send-data-2">Arduino and ESP8266 HTTP POST Send Data 2</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#arduino-esp8266-nodemcu-get-metodu-ile-veri-gonderme">Arduino, ESP8266, Nodemcu GET Metodu ile Veri Gönderme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#go-get-metodu-ile-veri-gonderme">GO GET Metodu ile Veri Gönderme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#php-get-metodu-ile-veri-gonderme">PHP GET Metodu ile Veri Gönderme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#nodejs-get-metodu-ile-veri-gonderme">NodeJS GET Metodu ile Veri Gönderme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#javascript-jquery-ajax-get-metodu-ile-veri-gonderme">Javascript Jquery Ajax GET Metodu ile Veri Gönderme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#java-unirest-get-metodu-ile-veri-gonderme">Java Unirest GET Metodu ile Veri Gönderme</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">Java Unirest GET Metodu ile Veri Gönderme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Java Unirest GET Metodu ile Veri Gönderme</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="read-data.html">Veri Al</a></li>
+<li class="toctree-l1"><a class="reference internal" href="read-data.html">Read Data</a></li>
 </ul>
 
   <div role="note" aria-label="source link">
@@ -1232,7 +1236,7 @@ zamanlı olarak takip edebilirsiniz.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="read-data.html" title="Veri Al"
+          <a href="read-data.html" title="Read Data"
              >next</a> |</li>
         <li class="right" >
           <a href="create-new-device.html" title="Add New Device"

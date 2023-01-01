@@ -60,6 +60,10 @@ function mqttConnect() {
   var client_id = "clientId-ZRBQ1xt4DK";
   var host = "broker.emqx.io";
   var port = 8083;
+  var host = "broker.hivemq.com";
+  var port = 8000;
+  var host = "mqtt.eclipse.org";
+  var port = 1883;
 
   console.log("connecting to " + host + " " + port);
   mqtt = new Paho.MQTT.Client(host, port, client_id);

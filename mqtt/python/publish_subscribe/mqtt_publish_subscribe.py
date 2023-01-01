@@ -35,7 +35,7 @@ def on_message(client, userdata, msg):
 
 
 client = paho.Client()
-client.username_pw_set("publicmqttbroker", "publicmqttbroker")
+client.username_pw_set("iothookpublic", "iothookpublic")
 client.on_publish = on_publish
 client.on_connect = on_connect
 client.on_message = on_message

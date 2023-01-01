@@ -1,9 +1,9 @@
-# cloud.iiotmq.com
+# iothook.com
 
 import paho.mqtt.client as mqtt
 import time
 
-broker = "publicmqttbroker.iiotmq.com"
+broker = "iothook.com"
 port = 1883
 
 
@@ -15,7 +15,7 @@ def on_message(client, userdata, message):
 
 
 client = mqtt.Client("client-id-subscribe-1234567")
-client.username_pw_set("publicmqttbroker", "publicmqttbroker")
+client.username_pw_set("iothookpublic", "iothookpublic")
 client.on_message = on_message
 
 print("connecting to broker")
